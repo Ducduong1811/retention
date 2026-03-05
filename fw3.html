@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Binance Ecosystem Flywheel</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0B0E11;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    color: #EAECEF;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px; height: 1000px;
+    background: radial-gradient(circle, rgba(240,185,11,0.05) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .page-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900; font-size: 26px;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: #F0B90B;
+    margin-top: 28px; margin-bottom: 4px;
+    text-align: center;
+  }
+  .page-subtitle {
+    font-size: 13px; color: #848E9C;
+    letter-spacing: 1px; margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .main-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  #chart {
+    width: 700px; height: 700px;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  /* ─── Detail Panel ─── */
+  .detail-panel {
+    position: absolute;
+    right: -380px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 360px;
+    background: #1E2329;
+    border: 1px solid rgba(240,185,11,0.15);
+    border-radius: 16px;
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    transform: translateY(-50%) translateX(20px);
+    box-shadow: 0 12px 48px rgba(0,0,0,0.6);
+    overflow: hidden;
+    z-index: 50;
+  }
+  .detail-panel.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-50%) translateX(0);
+  }
+
+  .panel-header {
+    padding: 20px 24px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .panel-header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .panel-num {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #0B0E11;
+  }
+  .panel-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  .panel-close {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: transparent;
+    color: #848E9C;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  .panel-close:hover {
+    background: rgba(255,255,255,0.08);
+    color: #EAECEF;
+  }
+
+  .panel-body {
+    padding: 16px 24px 24px;
+  }
+  .panel-effect {
+    font-size: 12px;
+    color: #848E9C;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    font-style: italic;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.02);
+    border-radius: 8px;
+    border-left: 3px solid;
+  }
+
+  .program-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    transition: all 0.2s;
+  }
+  .program-card:last-child { margin-bottom: 0; }
+  .program-card:hover {
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(255,255,255,0.1);
+  }
+  .program-name {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .program-name .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .program-desc {
+    font-size: 11.5px;
+    color: #848E9C;
+    line-height: 1.55;
+    padding-left: 14px;
+  }
+
+  /* Connector line from chart to panel */
+  .connector-line {
+    position: absolute;
+    top: 50%;
+    right: -24px;
+    width: 24px;
+    height: 2px;
+    opacity: 0;
+    transition: opacity 0.35s;
+    pointer-events: none;
+  }
+  .connector-line.active { opacity: 1; }
+
+  /* Click hint */
+  .click-hint {
+    font-size: 11px;
+    color: #474D57;
+    letter-spacing: 0.5px;
+    margin-top: 8px;
+    text-align: center;
+    animation: hintPulse 2.5s ease-in-out infinite;
+  }
+  @keyframes hintPulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.45; }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.94); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  #chart svg { animation: fadeIn 0.6s ease-out; }
+
+  /* Segment highlight state */
+  .seg-path { transition: opacity 0.2s, filter 0.2s; cursor: pointer; }
+  .seg-path.dimmed { opacity: 0.35 !important; }
+  .seg-path.active-seg { opacity: 1 !important; }
+</style>
+</head>
+<body>
+
+<div class="page-title">Binance Ecosystem Flywheel</div>
+<div class="page-subtitle">Click any segment to explore programs &amp; effects</div>
+
+<div class="main-container">
+  <div id="chart">
+    <svg class="connector-line" id="connectorLine">
+      <line x1="0" y1="0" x2="24" y2="0" stroke="#F0B90B" stroke-width="2" stroke-dasharray="4,3"/>
+    </svg>
+    <div class="detail-panel" id="detailPanel"></div>
+  </div>
+</div>
+
+<div class="click-hint">Click a segment to explore</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+const W = 700, H = 700, CX = W/2, CY = H/2;
+
+const svg = d3.select('#chart')
+  .append('svg')
+  .attr('viewBox', `0 0 ${W} ${H}`)
+  .attr('width', '100%')
+  .attr('height', '100%');
+
+const defs = svg.append('defs');
+const shadow = defs.append('filter').attr('id','shadow')
+  .attr('x','-15%').attr('y','-15%').attr('width','130%').attr('height','130%');
+shadow.append('feDropShadow')
+  .attr('dx',0).attr('dy',3).attr('stdDeviation',5)
+  .attr('flood-color','rgba(0,0,0,0.5)');
+
+// ─── SEGMENT DATA WITH SUB-PROGRAMS ───
+const segments = [
+  {
+    label: 'ONBOARD', sub: 'Referral & Rebates', num: '1', color: '#F0B90B',
+    effect: 'Viral growth → new users enter via referrals → engage in Earn/Launchpool → refer others.',
+    programs: [
+      { name: 'Referral Lite', desc: 'One-time rebates ($100–$1,000) for inviting friends. Simple share-link model for casual users.' },
+      { name: 'Referral Pro', desc: 'Ongoing commissions (up to 50% on trading fees) from referred users. Scales with referral volume.' },
+      { name: 'VIP / Loyalty Tiers', desc: 'Lower fees, exclusive perks for high-volume traders and BNB holders. Level 5+ unlocks premium rates & Alpha access.' },
+    ]
+  },
+  {
+    label: 'EARN', sub: 'Hold & Yield', num: '2', color: '#02C076',
+    effect: 'Encourages idle funds to stay on-platform → higher TVL → qualifies users for other perks (e.g., auto-entry to HODLer Airdrops).',
+    programs: [
+      { name: 'Simple Earn / Staking', desc: 'Earn APR/APY (3–400%+) on 180+ assets by holding/staking. Flexible or Locked products available.' },
+      { name: 'Dual Investment', desc: 'Conditional buy/sell at target prices with enhanced yields. Higher risk, higher reward structure.' },
+      { name: 'Yield Arena', desc: 'Limited-time campaigns (e.g., Spring Earn Fiesta) with boosted yields, leaderboards, and token pools ($1M+ rewards).' },
+    ]
+  },
+  {
+    label: 'LAUNCH', sub: 'Stake & Farm', num: '3', color: '#1E9FF2',
+    effect: 'Rewards holding/activity → free tokens drive trading → post-listing volume spikes.',
+    programs: [
+      { name: 'Launchpool', desc: 'Stake BNB/FDUSD → farm new tokens proportionally. Recent examples include OPN project launches.' },
+      { name: 'Megadrop', desc: 'Lock BNB + complete Web3 quests → earn points for exclusive airdrops of new tokens.' },
+      { name: 'Alpha Points', desc: 'Daily points from balances & trades → unlock exclusive airdrops, TGEs, and Alpha Box rewards.' },
+    ]
+  },
+  {
+    label: 'TRADE', sub: 'Compete & Win', num: '4', color: '#F6465D',
+    effect: 'Spikes short-term activity → habitual trading → qualifies for VIP tiers.',
+    programs: [
+      { name: 'Trading Competitions', desc: 'Prizes (e.g., 200 BNB pools) for top volume or ROI in spot and futures markets.' },
+      { name: 'Tournaments', desc: 'Bracket-style events with progressive prizes. PnL and volume-based rankings.' },
+      { name: 'Seasonal / Calendar Events', desc: '#BinanceWithPurpose, Ramadan campaigns — daily challenges, $750K+ reward pools for logins & tasks.' },
+    ]
+  },
+  {
+    label: 'CREATE', sub: 'Content & Community', num: '5', color: '#C99FFF',
+    effect: 'Creators promote projects → attracts new users → boosts platform buzz and trust.',
+    programs: [
+      { name: 'CreatorPad', desc: 'Earn tokens and commissions (up to 50%) by creating educational and promotional content.' },
+      { name: 'Binance Square Rewards', desc: 'Complete campaigns (e.g., ROBO/MIRA tasks), rank on leaderboards → earn token rewards.' },
+      { name: 'Community Campaigns', desc: 'Task-based missions — write, share, engage — with tiered prize pools for top contributors.' },
+    ]
+  },
+  {
+    label: 'REFER', sub: 'Viral Growth Loop', num: '6', color: '#FF8F00',
+    effect: 'Users refer friends → earn ongoing commissions → new users enter the cycle → exponential network growth.',
+    programs: [
+      { name: 'Referral Commissions', desc: 'Up to 50% ongoing commission on referred users\' trading fees. Passive income that compounds with network size.' },
+      { name: 'Loyalty Perks', desc: 'Enhanced referral rates for VIP members. Higher tiers earn more per referral, creating a self-reinforcing loop.' },
+      { name: 'BNB Cross-Boosts', desc: 'BNB holding multiplies referral rewards, auto-qualifies for HODLer airdrops, and enhances points across all programs.' },
+    ]
+  }
+];
+
+const vennCircles = [
+  { label: 'BNB\nHolding', color: '#F0B90B', cx: 0, cy: -30 },
+  { label: 'Points\nSystems', color: '#1E9FF2', cx: -28, cy: 20 },
+  { label: 'VIP\nTiers', color: '#C99FFF', cx: 28, cy: 20 },
+];
+
+// ─── RENDER FLYWHEEL ───
+const g = svg.append('g').attr('transform', `translate(${CX},${CY})`);
+
+const n = segments.length;
+const outerR = 290;
+const innerR = 195;
+const midR = (outerR + innerR) / 2;
+const gap = 0.05;
+const segAngle = (2*Math.PI - n*gap) / n;
+const arrowTip = 22;
+
+let activeIndex = -1;
+const segPaths = [];
+
+segments.forEach((seg, i) => {
+  const startA = -Math.PI/2 + i*(segAngle+gap);
+  const endA = startA + segAngle;
+  const preArrow = endA - arrowTip/outerR;
+
+  const path = d3.path();
+  path.moveTo(outerR*Math.cos(startA), outerR*Math.sin(startA));
+  path.arc(0,0,outerR, startA, preArrow, false);
+  path.lineTo(midR*Math.cos(endA), midR*Math.sin(endA));
+  path.lineTo(innerR*Math.cos(preArrow), innerR*Math.sin(preArrow));
+  path.arc(0,0,innerR, preArrow, startA, true);
+  path.closePath();
+
+  const segEl = g.append('path')
+    .attr('class', 'seg-path')
+    .attr('data-index', i)
+    .attr('d', path.toString())
+    .attr('fill', seg.color)
+    .attr('opacity', 0.85)
+    .attr('filter','url(#shadow)')
+    .attr('stroke', 'rgba(255,255,255,0.06)')
+    .attr('stroke-width', 0.5);
+
+  segPaths.push(segEl);
+
+  segEl.on('click', function() { togglePanel(i); });
+  segEl.on('mouseenter', function() {
+    if (activeIndex === -1) d3.select(this).attr('opacity', 1);
+  });
+  segEl.on('mouseleave', function() {
+    if (activeIndex === -1) d3.select(this).attr('opacity', 0.85);
+  });
+
+  // Labels
+  const labelA = (startA + endA) / 2;
+  const lx = midR * Math.cos(labelA);
+  const ly = midR * Math.sin(labelA);
+  let rot = (labelA * 180/Math.PI) + 90;
+  if (rot > 90 && rot < 270) rot += 180;
+
+  g.append('text')
+    .attr('x', lx).attr('y', ly - 7)
+    .attr('text-anchor','middle')
+    .attr('dominant-baseline','central')
+    .attr('transform',`rotate(${rot},${lx},${ly})`)
+    .attr('fill','#0B0E11')
+    .attr('font-family','Outfit, sans-serif')
+    .attr('font-size','18px')
+    .attr('font-weight','900')
+    .attr('letter-spacing','2.5px')
+    .style('pointer-events','none')
+    .text(seg.label);
+
+  g.append('text')
+    .attr('x', lx).attr('y', ly + 12)
+    .attr('text-anchor','middle')
+    .attr('dominant-baseline','central')
+    .attr('transform',`rotate(${rot},${lx},${ly})`)
+    .attr('fill','rgba(11,14,17,0.5)')
+    .attr('font-size','9.5px')
+    .attr('font-weight','500')
+    .attr('letter-spacing','0.5px')
+    .style('pointer-events','none')
+    .text(seg.sub);
+
+  // Number badge
+  const numA = startA + 0.22;
+  const nx = (innerR + 18) * Math.cos(numA);
+  const ny = (innerR + 18) * Math.sin(numA);
+
+  g.append('circle')
+    .attr('cx',nx).attr('cy',ny).attr('r',13)
+    .attr('fill','#0B0E11')
+    .attr('stroke',seg.color)
+    .attr('stroke-width',2)
+    .style('pointer-events','none');
+
+  g.append('text')
+    .attr('x',nx).attr('y',ny)
+    .attr('text-anchor','middle')
+    .attr('dominant-baseline','central')
+    .attr('fill',seg.color)
+    .attr('font-family','Outfit, sans-serif')
+    .attr('font-size','12px')
+    .attr('font-weight','700')
+    .style('pointer-events','none')
+    .text(seg.num);
+});
+
+// ─── Directional arrows in gaps ───
+segments.forEach((_, i) => {
+  const startA = -Math.PI/2 + i*(segAngle+gap);
+  const gapMid = startA - gap/2;
+  const ax = midR*Math.cos(gapMid);
+  const ay = midR*Math.sin(gapMid);
+  const s = 6;
+  g.append('polygon')
+    .attr('points',`${ax},${ay} ${ax+s*Math.cos(gapMid-0.5)},${ay+s*Math.sin(gapMid-0.5)} ${ax+s*Math.cos(gapMid+0.5)},${ay+s*Math.sin(gapMid+0.5)}`)
+    .attr('fill','#F0B90B').attr('opacity',0.6);
+});
+
+// ─── Inner ring ───
+g.append('circle').attr('r',innerR-6).attr('fill','none')
+  .attr('stroke','#F0B90B').attr('stroke-width',2).attr('opacity',0.35);
+g.append('circle').attr('r',innerR-6).attr('fill','none')
+  .attr('stroke','#F0B90B').attr('stroke-width',6).attr('opacity',0.12)
+  .style('animation','pulse 3s ease-in-out infinite');
+g.append('circle').attr('r',innerR-10).attr('fill','#0B0E11');
+
+// ─── Venn ───
+const vR = 56;
+vennCircles.forEach(v => {
+  g.append('circle').attr('cx',v.cx).attr('cy',v.cy).attr('r',vR)
+    .attr('fill',v.color).attr('opacity',0.16)
+    .attr('stroke',v.color).attr('stroke-width',1.5).attr('stroke-opacity',0.35);
+});
+vennCircles.forEach(v => {
+  const lines = v.label.split('\n');
+  const t = g.append('text')
+    .attr('x',v.cx).attr('y',v.cy - (lines.length-1)*7)
+    .attr('text-anchor','middle').attr('fill','#EAECEF')
+    .attr('font-family','Outfit, sans-serif')
+    .attr('font-size','12px').attr('font-weight','700').attr('letter-spacing','1px');
+  lines.forEach((l,li) => {
+    t.append('tspan').attr('x',v.cx).attr('dy', li===0?0:16).text(l);
+  });
+});
+
+// ─── PANEL LOGIC ───
+const panel = document.getElementById('detailPanel');
+const connector = document.getElementById('connectorLine');
+
+function togglePanel(i) {
+  if (activeIndex === i) {
+    closePanel();
+    return;
+  }
+  activeIndex = i;
+  const seg = segments[i];
+
+  // Dim other segments
+  segPaths.forEach((p, j) => {
+    p.classed('dimmed', j !== i);
+    p.classed('active-seg', j === i);
+  });
+
+  // Build panel HTML
+  panel.innerHTML = `
+    <div class="panel-header">
+      <div class="panel-header-left">
+        <div class="panel-num" style="background:${seg.color}">${seg.num}</div>
+        <div class="panel-title" style="color:${seg.color}">${seg.label}</div>
+      </div>
+      <button class="panel-close" onclick="closePanel()">✕</button>
+    </div>
+    <div class="panel-body">
+      <div class="panel-effect" style="border-left-color:${seg.color}">
+        <strong style="color:#EAECEF">Effect:</strong> ${seg.effect}
+      </div>
+      ${seg.programs.map(p => `
+        <div class="program-card">
+          <div class="program-name">
+            <span class="dot" style="background:${seg.color}"></span>
+            <span style="color:${seg.color}">${p.name}</span>
+          </div>
+          <div class="program-desc">${p.desc}</div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+
+  panel.classList.add('active');
+  connector.classList.add('active');
+  connector.querySelector('line').setAttribute('stroke', seg.color);
+}
+
+function closePanel() {
+  activeIndex = -1;
+  panel.classList.remove('active');
+  connector.classList.remove('active');
+  segPaths.forEach(p => {
+    p.classed('dimmed', false);
+    p.classed('active-seg', false);
+    p.attr('opacity', 0.85);
+  });
+}
+
+// Close on outside click
+document.addEventListener('click', (e) => {
+  if (activeIndex === -1) return;
+  const chartEl = document.getElementById('chart');
+  if (!chartEl.contains(e.target)) closePanel();
+});
+
+</script>
+</body>
+</html>
