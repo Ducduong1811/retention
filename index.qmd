@@ -17,16 +17,13 @@ format:
     title-slide: false
     self-contained-math: true
     include-in-header:
-    # - flywheel_2.html
-    - text: |
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+      - text: |
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
       
 
 ---
 ## Overview of Binance {#flywheel}
 The overiew of Binance Cycle
-<!-- {{< include binance.html >}}
- -->
 
 <iframe src="binance.html" style="border:none; width:100%; height:70vh;" scrolling="no"></iframe>
 
@@ -290,127 +287,6 @@ Binance frequently launches time-limited campaigns, airdrops, token vouchers, an
 
 ---
 
-## Opening App {.scrollable}
-Upon opening app, March event shows up in a pop-up notification
-
-![](images/IMG_0709.PNG){width=100%}
-
-Main screen also have banner for ongoing events
-
-![](images/IMG_760A.jpeg){width=100%}
-
----
-
-## What are current events of BingX
-- Complete tasks to claim token airdrop (ESP)
-  - Future Trading Volume
-  - Spot Trading Volume
-
----
-
-## Shards Program {.scrollable}
-*Core gamified loyalty and retention system on BingX Spot trading*
-
-*Mechanism*: Shard is like badge, user earn to up level and perks. How to earn?
-- Completing KYC verification, 
-- making deposits (e.g., first deposit ≥50 USDT), 
-- Spot trading (cumulative volume thresholds, daily check-ins with minimal trades, unlocking treasure boxes via trading), 
-- Participating in events/campaigns, 
-- Referring friends (invites who sign up and trade), 
-- daily logins, social tasks, and limited-time promotions,...
-
-*Benefits and rewards*: Higher Shard totals advance user levels, granting tiered perks such as:
-- Trading fee discounts/rebates.
-- Exclusive/high-value token airdrops.
-- Priority/early access to Token Generation Events (TGEs) or popular tokens.
-- Wealth APR booster vouchers.
-- VIP upgrade benefits or privileges.
-- Leaderboard rewards, annual honorary badges.
-- Premium merchandise.
-- Dedicated customer service.
-- Other surprises like event passes or bonus yields.
-
----
-
-## VIP Program {.scrollable}
-
-*Tiered loyalty club for active/high-volume traders, rewarding sustained contributions with premium benefits.*
-
-*Levels*: From VIP 1 to Supreme VIP (plus regular users), based on futures/spot trading volume, asset holdings, or other thresholds.
-
-*Key benefits*:
-- Significantly reduced trading fees
-- 0 slippage on futures (guaranteed price orders, trigger orders).
-- Higher 24h withdrawal limits.
-- Discounted fiat exchange/convert rates.
-- High-APR wealth products (e.g., up to 13% on short-term USDT).
-- Boosted Launchpool staking limits (e.g., +100%).
-- Dedicated relationship managers (1-on-1 support).
-- Exclusive events (e.g., offline gatherings).
-
----
-
-## Rewards Hub {.scrollable}
-
-New User Zone (often time-limited post-signup, e.g., 21 days): Sign-up mystery boxes (5-30 USDT), KYC/deposit/trade tasks, exclusive challenges (e.g., 2-day futures trading volume ≥2,000 USDT daily for up to 700 USDT vouchers).
-Advanced Zone (for existing users): VIP restoration (up to 3,500 USDT cash), trading volume milestones for vouchers/tokens, trending events/prize pools (e.g., $150,000 pools).
-Vouchers/types: Position, token, bonus, trial fund, copy trading subsidies—many usable as margin or withdrawable profits after conditions.
-Retention element: Cumulative trading tasks, daily/ongoing challenges, limited slots (first-come-first-served), and manual claims encourage repeated logins and activity.
-
-### Daily Checkin
-- Each check-in cycle lasts 5 days. Cycle reset after 5 days
-- Cycle reset if missing 1 day
-- Random rewards (not always vouchers), but there always a rewards
-
-![](images/image-8.jpeg){width=50%}
-
-
-### Rewards
-- Voucher to use in Futures
-- **Notice**: User can only withdraw profits from the position, but cannot withdraw the voucher money itself. *Can we do the same with Coin98?*
-![](images/image-9.jpeg){width=50%}
-
----
-
-## Feb SuperX: Predict to win 1 BTC{.scrollable}
-
-![](images/image-10.jpeg){width=100%}
-
-Consists of **Predict to Win**, **Solo Contest**, **Referral Contest**, and **Share & Earn** (social sharing/tasks)
-
-<br>
-
-### Predict to Win (BTC Daily Prediction)
-- Users make daily predictions on BTC's price trend (e.g., up/down or specific ranges) > Correct predictions earn entries or shares in the 1 BTC prize pool (distributed weekly or overall) > Additional rewards include mystery boxes or vouchers for participation.
-- **low-barrier**: no high trading volume required—just accurate market calls.
-- **Rewards**: Share of 1 BTC (e.g., weekly portions like 0.18 BTC mentioned in some updates) + other vouchers. 
-- **Goal**: Encourages daily logins and market analysis, boosting platform stickiness.
-
-### Solo Contest (Trading Competition)
-*A leaderboard-based contest split into phases, rewarding top performers in futures and spot trading*
-Leaderboards:
-- **Futures ROI (Return on Investment)**: Top ranks based on percentage ROI formula → [(Withdrawals + End NAV - Other Earnings - (Initial NAV + Deposits)) / (Initial NAV + Deposits)]. Requires min. 100,000 USDT trade volume.
-Futures Trade Volume: Cumulative valid futures volume (crypto pairs only). Min. 1 USDT volume.
-Spot Trade Volume: Cumulative spot volume (excludes stablecoin/zero-fee pairs). Min. 50 USDT volume.
-
-<br>
-
-### Referral Contest
-
-- Invite new users who register, complete KYC/trade, and meet volume requirements.
-- Rewards: Top 1–10 get Trial Fund Vouchers; ranks 11+ get Position Vouchers (10x leverage).
-- Ties into BingX's ongoing referral program for uncapped commissions.
-
-| **Event**                | **Prize Pool**   | **Time (UTC+8)**                                                                                                                                            | **Introduction**                                                                                                            |
-| ------------------------ | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| **Predict BTC**          | 1 BTC + $200,000 | 2026-02-26 00:00 to 2026-03-17 23:59                                                                                                                        | Complete tasks to receive a voting entry and a mystery box. Participants with correct predictions share a 1 BTC prize pool! |
-| **Solo Trading Contest** | $2,567,000       | Registration: 2026-02-26 00:00 to 2026-03-17 18:00   <br>Phase I: 2026-03-04 00:00 to 2026-03-10 18:00   <br>Phase II: 2026-03-11 00:00 to 2026-03-17 18:00 | Three leaderboards are now live: Futures Volume, ROI, and Spot Volume. Rewards can be stacked.                              |
-| **Referral Contest**     | $155,500         | 2026-02-26 00:00 to 2026-03-17 23:59                                                                                                                        | Invite 1 person to share the prize pool!                                                                                    |
-| **Share & Earn**         | $77,500          | 2026-02-26 00:00 to 2026-03-17 23:59                                                                                                                        | Share the event on your social media to claim the reward.                                                                   |
-
-
----
-
 ## BingX Retention Program {.scrollable}
 
 {{< include bingx.html >}}
@@ -539,11 +415,117 @@ Most of BingX’s retention strategy can be grouped into **four engagement layer
 
 BingX relies heavily on **gamified rewards + trading incentives + social trading network effects** to retain users rather than only deposit bonuses.
 
+---
 
-[1]: https://bingx.pro/en/blog/article/bingx-shards-a-new-rewards-ecosystem-for-enhanced-user-engagement?utm_source=chatgpt.com "BingX Shards: A New Rewards Ecosystem for Enhanced User Engagement"
-[2]: https://bingx.com/en/blog/article/what-are-bingx-shards-and-how-to-redeem-exclusive-rewards?utm_source=chatgpt.com "What Are BingX Shards and How to Redeem Exclusive Rewards?"
-[3]: https://bingxservice.zendesk.com/hc/en-001/articles/11274682126479-BingX-Rewards-Hub-Rules?utm_source=chatgpt.com "BingX Rewards Hub Rules – BingX"
-[4]: https://bingxservice.zendesk.com/hc/en-001/articles/14044996418959-BingX-Completes-October-2025-10-01-to-2025-10-31-Monthly-Airdrop-Reward-Distribution?utm_source=chatgpt.com "BingX Completes October (2025-10-01 to 2025-10-31) Monthly Airdrop Reward Distribution – BingX"
-[5]: https://coincodecap.com/bingx-rewards?utm_source=chatgpt.com "BingX Rewards Hub 2025 – Earn 12,100+ USDT NOW! (July 2025) - CoinCodeCap"
-[6]: https://blog.bingx.com/events/bx-affiliate-contest-exclusive/?utm_source=chatgpt.com "BX Affiliate Contest - Exclusive $23,000 Prize Pool For BingX Partners - BingX Blog"
-[7]: https://uat-tr.bingx.com/support/articles/11273694355343?utm_source=chatgpt.com "BingX Global Broker Hunt Program 3.0: Upgraded Rewards & Massive Resources for Exposure!"
+## Feb SuperX: Predict to win 1 BTC{.scrollable}
+[Ongoing]{.pill .golden}
+
+*Biggest event of BingX in Feb & March*
+
+<img src="images/image-11.png" style="width:100%;" />
+<!-- ![](images/image-4.png){width=100%} -->
+
+Consists of **Predict to Win**, **Solo Contest**, **Referral Contest**, and **Share & Earn** (social sharing/tasks)
+
+### 1. **Predict to Win (BTC Daily Prediction)**
+*Correct daily predictions will earn shares in the 1 BTC prize pool*
+
+**Mechanism**: Users make daily predictions on BTC's price trend. Correct predictions earn entries or shares in the **1 BTC prize pool** and other rewards
+
+**Why it works**: 
+
+  * No barrier to join
+  * Encourages daily logins and market analysis, boosting platform stickiness.
+
+<br>
+
+### 2. **Solo Contest (Trading Competition)**
+*Trading leaderboard across different products, reward top performers*
+
+**Mechanism**: Leaderboards including *Futures ROI* (Return on Investment), *Futures Trade Volume*, *Spot Trade Volume*.
+
+**Why it works**:
+
+- Cumulative valid spot and futures trading volume increase hype
+- More volume, more participants > More rewards
+   
+<br>
+
+### 3. **Referral Contest**
+*Referral leaderboard, more valid referral > more rewards*
+
+**Mechanism**: Each referee who register, complete KYC/trade, and meet volume requirements are counted as a valid ref. Rewards for top 10 referrers.
+
+**Why it works**:
+
+  - Works concurrently with on-going referral commissions
+  - Simple and easy to complete
+
+<br>
+
+### 4. **Share & Earn / Tasks & Lucky Draws**
+*Complete tasks for lucky draw*
+
+**Mechanism**:  Complete event tasks (e.g., deposits, trades, social shares) for lucky draw entries—**every draw wins** something. 
+
+**Rewards** include various vouchers: Token Voucher, Position Voucher (1x–10x leverage), Futures Bonus Voucher (1x–5x), Trial Fund Voucher (50% offset), Spot Rebate, Wealth APR Booster, Grid/Copy Trading subsidies.
+
+**Why it works**:
+
+- Social sharing tasks bring more traction to the program
+- Rewards are in voucher, not real money
+- Each draw ensure a rewards, regardless big or small
+
+---
+
+## Claim ESP Airdrop
+[Ongoing]{.pill .golden}
+
+*Part of Token Airdrop Rewards program, promote activity with newly listed tokens*
+
+<img src="images/image-12.png" style="width:100%;" />
+<!-- ![](images/image-12.png){width=100%} -->
+
+**Mechanism**: Complete "simple tasks" to qualify/earn:
+
+- Futures Trading Volume of 6000 USDT
+- Spot Trading Volume of 5,000 USDT
+
+---
+
+## 0 Fee Special Wheel Carnival
+[Ongoing]{.pill .golden}
+
+*Complete tasks for Lucky Draw*
+
+<img src="images/image-13.png" style="width:100%;" />
+<!-- ![](images/image-13.png){width=100%} -->
+
+**Mechanism**: Complete tasks to earn draw entries, guarantee rewards (no blanks). Tasks such as:
+
+- First Spot Trade 50 USDT
+- First Futures Trade 200 USDT
+- Accumulate Futures Trade Volume of 10,000 to 2,000,000 USDT
+- Accumulate spot trading volume to earn up to 23 lucky draw chances
+
+---
+
+## Vote to Share $100,000 in Gold Prize Pool!{.scrollable}
+[Ongoing]{.pill .golden}
+
+*Complete daily tasks to earn vote entries, prize pool unlocked based on participants*
+
+<img src="images/image-14.png" style="width:100%;" />
+<!-- ![](images/image-14.png){width=100%} -->
+
+**Mechanism**: Complete daily tasks to have vote entries, vote either Crude Oil or Gold have bigger volatility. 
+
+**Why it works**:
+
+- Follow currently hot events
+- "Vote" not bet, but same idea
+- Prize pool based on participants -> More referrals
+- Each task has different set of goals mechanisms. Some tasks is simple, complete in one go, while others have progress. 
+
+<img src="images/image-15.png" style="width:100%;" />
+<!-- ![](images/image-14.png){width=100%} -->

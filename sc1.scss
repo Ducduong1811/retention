@@ -147,7 +147,8 @@ $code-block-bg: #f3ece2 !default;
    ======================================== */
 
 section p:has(.pill) {
-  margin: 0;
+  order: -1;
+  margin: 0 0 0.3em 0;
 }
 
 section .pill {
@@ -166,11 +167,6 @@ section .pill {
 section .pill.golden {
   background: var(--golden-soft);
   color: #9a7530;
-}
-
-section .pill.sage {
-  background: var(--sage-soft);
-  color: #4e6652;
 }
 
 
