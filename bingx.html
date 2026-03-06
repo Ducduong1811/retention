@@ -1,0 +1,151 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BingX Retention Flywheel</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<style>
+
+body{
+  font-family: var(--font-display);
+  background: var(--background-color);
+  color: var(--text-color);
+  text-align:center;
+}
+
+#chart{
+    width:600px;
+    margin:auto;
+}
+
+.segment{
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.segment:hover{
+    opacity:0.8;
+}
+
+#panel{
+    margin-top:20px;
+    background: var(--background-color);
+    padding:15px;
+    border-radius:8px;
+    width:520px;
+    margin-left:auto;
+    margin-right:auto;
+}
+</style>
+</head>
+
+<body>
+
+<!-- <h2>BingX Retention Flywheel</h2>
+<p>Click a segment to explore the retention mechanism</p> -->
+<!-- Wrap both in a flex container -->
+<div style="display:flex; align-items:center; gap:1px;">
+
+  <div id="chart"></div>
+
+  <div id="panel" style="
+    width: 400px;
+    min-height: 180px;
+    padding: 24px;
+    background: var(--background-color);
+    font-size: 16px;
+  ">
+    Select a segment to see details.
+  </div>
+
+</div>
+
+<script>
+
+const data = [
+{
+name:"1. Shards Loyalty",
+desc:"Gamified loyalty points earned from trading, deposits and referrals. Unlock tiers and benefits."
+},
+{
+name:"2. Rewards Hub",
+desc:"Daily check-ins, trading tasks, mystery boxes and activity missions that encourage habitual engagement."
+},
+{
+name:"3. VIP & Airdrops",
+desc:"VIP tiers provide trading fee discounts, monthly airdrops, APR boosters and exclusive campaigns."
+},
+{
+name:"4. Trading Campaigns",
+desc:"Competitions and trading challenges with reward pools that increase activity."
+},
+{
+name:"5. Referral Program",
+desc:"Users earn commissions by inviting new traders, strengthening network-driven growth."
+},
+{
+name:"6. Copy Trading",
+desc:"Users follow elite traders, earning passive profits while remaining engaged with the platform."
+},
+]
+
+const width = 520
+const height = 520
+const radius = 220
+
+const svg = d3.select("#chart")
+.append("svg")
+.attr("width", width)
+.attr("height", height)
+.append("g")
+.attr("transform",`translate(${width/2},${height/2})`)
+
+const color = d3.scaleOrdinal()
+.range([
+"#ff7f50",
+"#ffd166",
+"#06d6a0",
+"#118ab2",
+"#ef476f",
+"#a78bfa"
+])
+
+const pie = d3.pie()
+.value(1)
+
+const arc = d3.arc()
+.innerRadius(90)
+.outerRadius(radius)
+
+svg.selectAll("path")
+.data(pie(data))
+.enter()
+.append("path")
+.attr("d",arc)
+.attr("fill",(d,i)=>color(i))
+.attr("class","segment")
+.on("click",(event,d)=>{
+document.getElementById("panel").innerHTML =
+"<h3>"+d.data.name+"</h3><p>"+d.data.desc+"</p>"
+})
+
+svg.selectAll("text")
+.data(pie(data))
+.enter()
+.append("text")
+.attr("transform", d => `translate(${arc.centroid(d)})`)
+.attr("text-anchor","middle")
+.attr("font-size","12px")
+.attr("fill","white")
+.text(d=>d.data.name)
+
+svg.append("text")
+.attr("text-anchor","middle")
+.attr("dy","0.35em")
+.attr("font-size","16px")
+.text("BingX")
+
+</script>
+
+</body>
+</html>
