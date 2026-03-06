@@ -27,146 +27,49 @@ The overiew of Binance Cycle
 
 <iframe src="binance.html" style="border:none; width:100%; height:70vh;" scrolling="no"></iframe>
 
----
-
-## Ideas for Coin98 {#onboard}
-
-1. **Learn to Earn**: For each new products/ partnerships. Additional to blogs, we have camp with quiz that rewards for each correct answer
-2. **Earning Hub**: Instead of Stake Master for only NE's tokens, what if we aggregate all yields products into UI, abstracting away the providers?
 
 ---
 
-## What triggers a user to use DeFi wallet app?
+## Onboard {.scrollable}
+*Benefit for each referrer and referee*
 
-1. *Interact* with a Specific dApp or Protocol
-2. Seeking *Higher Yields* or Passive Earning in DeFi
-3. Participating in *Early Token Launches* or *Airdrops*
-4. Self-Custody
-5. Multi-Chain or Cross-Chain Activity
-6. Privacy
+### Referral Program
 
----
+**Referral Lite**: Simple one-time bonuses.
 
-## What are the pain points of users in crypto right now? {.small-text}
+- Friend signs up + buys >$50 crypto + trades >$100. **Both** get up to **$100** rebate. Up to **$1,000** total.
 
-1. *Seed Phrase & Private Key Anxiety*: Fear of losing seed phrase. No recovery if lost
-2. *Gas Fees Confusion*: Not understanding why need native token just to transact
-3. *Multi-Chain Fragmentation*: Users must manually switch chains, bridge assets across networks, understand different explorers and token standards
-4. *Security & scams* — Phishing, impersonation, approval drainers, social engineering; losses estimated $14-17B+ in recent years, with AI-enabled tactics rising
-5. *Lack of confidence* — 59% of non-owners cite no protection, cyber risks; even owners face hacks, rugs, and trust erosion
+**Referral Pro**: Ongoing passive income.
 
----
+- Earn up to **50%** commission on friends' trading fees.
+- Share up to **20%** fee discount with friend.
+- Commissions paid hourly.
 
-## Pain points (cont.)
-6. *UX & accessibility barriers* — Poor consumer-grade experiences, wallet setup friction, unclear value for everyday use
-7. *Connecting wallet to malicious sites* and being hacked
-8. *Failed Transactions* — Users don't understand why a transaction failed, why gas was deducted, or what error codes mean
-9. *Asset Visibility Problems*: Users panic when tokens don't auto-display; They must manually add contract addresses
-10. *Portfolio & PnL Tracking Difficulty*: No unified dashboard across chains; Hard to track cost basis
+<br>
+
+### Learn & Earn  
+*Earn while learning*
+  
+**Mechanism**: Sign up account → pass KYC → complete courses → pass quiz → rewarded with a token voucher. $2 - $10/course.  
+
+**Idea for Coin98**: Instead of writing blogs to introduce partners/features → *What if* we convert the blogs into short courses? User earn if finish quiz → Deeper interactions than blogs.
 
 ---
 
-## What virtue should we strive for?
-*What do users come to our wallet for?*
-
-- Is it for earning? (Because we support different earning mechanism,...)
-- Is it for security? (Support checking contracts, risk warning,...)
-- Is it for Vietnamese service? (Deep integration in Vietnamese economy, services?)
-- Is it for ease of use? (Easy to use, supporting features like easy earning,...)
-
-> Being on user's top of mind for at least 1 virtue.
-
----
-
-## What elements increase retention in app? {.small-text}
-
-*If the user sees a specific benefit, the likelihood of returning to the tool increases*
-
-- *Cumulative bonuses* for transaction frequency. Needless to be large, but regularity forms a habit. Rewards must be transparent and predictable.
-- *Favorable conditions* when making specific transactions like paying bills, grocery,...
-- *Privacy and security*. The user must be confident that their data is protected.
-- *Education* such as educational materials, built-in prompts, and financial analytics.
-- *Social component* — transfer funds within a family, collective savings, or support for local initiatives. Strengthening emotional attachment.
-
-::: {.footer-note}
-[Binance Square, March 2026](https://www.binance.com/en/square/post/292738653100098)
-:::
----
-
-## Binance
-
-*How is Binance doing?*
-
----
-
-## Binance Earn
+## Earn {.scrollable}
 
 *Offer wide variety of earn products, fit for beginner as well as advanced trader*
 
-Classified into 2 types of earnings: **Simple Earn** and **Advanced Earn**.
+<br>
 
-**Simple Earn** — Low risk, low yield. Deposits are protected by Binance in token amount.
+### Simple Earn
+*Low risk, low yield*
 
-**Advanced Earn** — High risk, high return. Including *Dual Investment, Smart Arbitrage, On-Chain Yields and Discount Buy*.
+User lends Binance principal, Binance uses that money for internal operations. Users earn rewards, calculated as **APR**.
 
----
+<br>
 
-## Simple Earn {.scrollable}
-
-*Straightforward, real-time, and safe*
-
-
-*Mechanism*: User lends Binance principal, Binance uses that money for internal operations. Users earn rewards, calculated as **APR**.
-
-- Low risk, easy to withdraw, protected in token terms, easy for beginner.
-- Profit updates everyday, trigger users to check balance
-- Offer **different tokens** with different APRs, some could be high (from 2-10%)
-
-*Why this increases retention?* This could be marketed as the easiest, lowest risk for beginners to earn in crypto.
-
-::: {.columns}
-
-::: {.column width="50%"}
-![](images/image-4.png){width=100%}
-:::
-
-::: {.column width="50%"}
-![](images/image-3.png){width=100%}
-:::
-
-:::
-
----
-
-## Simple Earn: Types of product
-
-*Fit different needs*
-
-| Feature | Flexible Products | Locked Products |
-|---|---|---|
-| **Liquidity** | Withdraw anytime | Locked fixed period |
-| **APR** | Lower, market dependent | Higher, 2-10x more |
-| **Best for** | Emergency access | Higher yield seekers |
-| **Redemption** | Almost instant | After lock period ends |
-
----
-
-## Reflect on Coin98
-
-[Binance / Earn / Simple]{.pill .golden}
-
-*Can Coin98 be that wallet that users come for easy earning?*
-
-**Coin98 PowerPool** is the most similar to Binance earn, but only focus on NE's token, and has stopped earning.
-
-*What if* we collab with different lending/ liquidity protocols, acting as a abstracting, reliable central hub for users to earn? That way we can hook up new user with this no-risk earning feature.
-
----
-
-## Advanced Earn {.small-text}
-
-[Binance / Earn / Advanced]{.pill .golden}
-
+### Advanced Earn 
 *Maximize earnings for corresponding risks. Suited for advanced traders*
 
 **Dual Investment**: High yield product — buy low or sell high at desired price and date, while earning rewards no matter which direction the market goes.
@@ -179,107 +82,21 @@ Classified into 2 types of earnings: **Simple Earn** and **Advanced Earn**.
 
 ---
 
-## Key Differences: Simple vs Advanced {.dense}
+## Launchpool, Megadrop, and Alpha Programs {.scrollable}
 
-| Feature | Simple Earn | Advanced Earn |
-|---|---|---|
-| **Target** | Beginners, passive earn | Experienced traders |
-| **Risk** | Low — principal protected | Medium to High |
-| **Returns** | Predictable APR (1–10%) | Higher (10–50%+ APR) |
-| **Liquidity** | Flexible or fixed periods | Often fixed settlement |
-| **Complexity** | Very low — deposit & earn | Need strategy knowledge |
+- **Launchpool**: Stake BNB/FDUSD/USDC → *Earn* new project tokens proportionally. Unlock anytime.
 
----
+- **Megadrop**: Lock BNB in Simple Earn + Complete quests → *Earn* airdrops from early Web3 projects.
 
-## "Learn & Earn"
+- **Alpha (Points)**: Earn daily points via balance tiers + trading volume → *Earn* exclusive airdrops, TGEs, Alpha Box.
 
-[Binance / Learn]{.pill .golden}
-
-*Earn while learning*
-
-*Mechanism*: Sign up account → pass KYC → complete courses → pass quiz → rewarded with a token voucher. $2 - $10/course.
-
-*Time & amount limited*. After program ends, user can still learn but not earn any rewards.
-
-*Idea*: Instead of writing blogs to introduce partners/features → *What if* we convert the blogs into short courses? User earn if finish quiz → Deeper interactions than blogs.
-
----
-
-## Launchpool, Megadrop, and Alpha Programs {.small-text}
-
-[Binance / Earn]{.pill .golden}
-
-- *Launchpool*: Stake BNB/FDUSD/USDC → *Earn* new project tokens proportionally. Unlock anytime.
-- *Megadrop*: Lock BNB in Simple Earn + Complete quests → *Earn* airdrops from early Web3 projects.
-- *Alpha (Points)*: Earn daily points via balance tiers + trading volume → *Earn* exclusive airdrops, TGEs, Alpha Box.
 - *Idea*: Stake/hold/trade → Free early tokens → More activity → Loyalty & retention.
 
 ---
 
-## Launch Programs: How is Coin98 doing? {.small-text}
-
-[Binance / Earn]{.pill .golden}
-
-- We have applied this tactic to launch different tokens (*Holder Airdrop* for DADA, ONEID, DEF; and *Starship*).
-- But we could not keep these projects going, and the price keeps dumping → erode trust.
-- *Current Cycle*: Low user base → Only low-quality projects → Poor launches → Price dumps → Users see scams → Trust erodes → User base shrinks further → **We need to break this cycle**
-
----
-
-## How to reverse it {.warm}
-
-*Prioritize quality + trust + sustainable incentives*
-
-1. **Raise Launch Bar**: Only source quality projects
-2. **Points > Simple airdrops**: Reward activity/loyalty
-3. **Locks & vesting**: Prevent instant rugs
-
----
-
-## Referral Program {.small-text}
-
-[Binance / Earn]{.pill .golden}
-
-**Referral Lite**: Simple one-time bonuses.
-
-- Friend signs up + buys >$50 crypto + trades >$100. **Both** get up to **$100** rebate. Up to **$1,000** total.
-
-**Referral Pro**: Ongoing passive income.
-
-- Earn up to **50%** commission on friends' trading fees.
-- Share up to **20%** fee discount with friend.
-- Commissions paid hourly.
-
----
-
-## Rewards Hub {.scrollable}
-
-*Mechanism*: Complete different tasks in-app to earn rewards
-
-*Rewards*: Rewards as vouchers, can be used in different products (Perps, Margin,...)
-
-**Daily Airdrop**
-
-[Binance / Tasks / Daily]{.pill .golden}
-
-**Mechanism**: Daily tasks, reset daily, increase engagement
-
-- Trade cumulative 100 USDT any token in Spot
-- Trade cumulative 100 USDT any token in Future
-- Trade cumulative 100 USDT any token in Convert
-- Refer a friend to register and complete KYC
-- Maintain minimum 300 USDT balance in Spot Wallet
-
-**Rewards**: Airdrop Points
-**CreatorPad and Binance Square Rewards**
+## CreatorPad and Binance Square Rewards
 
 Users (especially creators) can unlock token rewards by participating in content creation, engagement, or campaigns on Binance Square. This fosters community activity and retention through incentives.
-
----
-
-## Overall {.earth}
-
-Binance frequently launches time-limited campaigns, airdrops, token vouchers, and yield opportunities (e.g., via Launchpool or specific asset subscriptions) to boost engagement. Many of these are accessible via the Binance app/website under sections like Earn, Square, Activity, or Announcements.
 
 ---
 
@@ -417,7 +234,7 @@ BingX relies heavily on **gamified rewards + trading incentives + social trading
 
 ---
 
-## Feb SuperX: Predict to win 1 BTC{.scrollable}
+## [Feb SuperX: Predict to win 1 BTC](https://bingx.com/en/activity/febsuperx?ch=bingx_appbanner&sourceType=63&themeType=2&code=QEF5ZS) {.scrollable}
 [Ongoing]{.pill .golden}
 
 *Biggest event of BingX in Feb & March*
@@ -478,7 +295,7 @@ Consists of **Predict to Win**, **Solo Contest**, **Referral Contest**, and **Sh
 
 ---
 
-## Claim ESP Airdrop
+## [Claim ESP Airdrop](https://bingx.com/en/activity/general/7288217384?ch=banner_app&sourceType=63&code=QEF5ZS) {.scrollable}
 [Ongoing]{.pill .golden}
 
 *Part of Token Airdrop Rewards program, promote activity with newly listed tokens*
@@ -486,14 +303,16 @@ Consists of **Predict to Win**, **Solo Contest**, **Referral Contest**, and **Sh
 <img src="images/image-12.png" style="width:100%;" />
 <!-- ![](images/image-12.png){width=100%} -->
 
-**Mechanism**: Complete "simple tasks" to qualify/earn:
+**Mechanism**: Complete simple tasks:
 
 - Futures Trading Volume of 6000 USDT
 - Spot Trading Volume of 5,000 USDT
 
+To earn share of 200,000 ADA.
+
 ---
 
-## 0 Fee Special Wheel Carnival
+## [0 Fee Special Wheel Carnival](https://bingx.com/en/activity/turntable/4428089792?sourceType=63&code=QEF5ZS) {.scrollable}
 [Ongoing]{.pill .golden}
 
 *Complete tasks for Lucky Draw*
@@ -510,7 +329,7 @@ Consists of **Predict to Win**, **Solo Contest**, **Referral Contest**, and **Sh
 
 ---
 
-## Vote to Share $100,000 in Gold Prize Pool!{.scrollable}
+## [Vote to Share $100,000 in Gold Prize Pool!](https://bingx.com/en/activity/voteActivity/0271014970?ref=QEF5ZS&ch=banner_app) {.scrollable}
 [Ongoing]{.pill .golden}
 
 *Complete daily tasks to earn vote entries, prize pool unlocked based on participants*
