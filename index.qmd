@@ -100,6 +100,16 @@ Users (especially creators) can unlock token rewards by participating in content
 
 ---
 
+## Ideas for Coin98 {.scrollable}
+
+- **Learn&Earn**: From Binance Learn&Earn, we can update the blogs of Coin98. Instead of writing blogs to introduce partners/features → *What if* we convert the blogs into short courses? User earn if finish quiz → Deeper interactions than blogs.
+
+- **Earn**: *Coin98 PowerPool* is the most similar to Binance earn, but only focus on NE's token, and has stopped earning. *What if* we collab with different lending/ liquidity protocols, acting as a abstracting, reliable central hub for users to earn? That way we can hook up new user with this no-risk earning feature.
+
+- **Earning Hub**: Instead of Stake Master for only NE's tokens, what if we aggregate all yields products into UI, abstracting away the providers?
+
+---
+
 # BingX
 
 ---
@@ -348,3 +358,45 @@ To earn share of 200,000 ADA.
 
 <img src="images/image-15.png" style="width:100%;" />
 <!-- ![](images/image-14.png){width=100%} -->
+
+---
+
+## Additionals
+
+### What are the pain points of users in crypto right now? 
+
+1. *Seed Phrase & Private Key Anxiety*: Fear of losing seed phrase. No recovery if lost
+
+2. *Gas Fees Confusion*: Not understanding why need native token just to transact
+
+3. *Multi-Chain Fragmentation*: Users must manually switch chains, bridge assets across networks, understand different explorers and token standards
+
+4. *Security & scams* — Phishing, impersonation, approval drainers, social engineering; losses estimated $14-17B+ in recent years, with AI-enabled tactics rising
+
+5. *Lack of confidence* — 59% of non-owners cite no protection, cyber risks; even owners face hacks, rugs, and trust erosion
+
+6. *UX & accessibility barriers* — Poor consumer-grade experiences, wallet setup friction, unclear value for everyday use
+
+7. *Connecting wallet to malicious sites* and being hacked
+
+8. *Failed Transactions* — Users don't understand why a transaction failed, why gas was deducted, or what error codes mean
+
+9. *Asset Visibility Problems*: Users panic when tokens don't auto-display; They must manually add contract addresses
+
+10. *Portfolio & PnL Tracking Difficulty*: No unified dashboard across chains; Hard to track cost basis
+
+<br>
+
+### What triggers a user to use DeFi wallet app?
+
+1. *Interact* with a Specific dApp or Protocol
+
+2. Seeking *Higher Yields* or Passive Earning in DeFi
+
+3. Participating in *Early Token Launches* or *Airdrops*
+
+4. Self-Custody
+
+5. Multi-Chain or Cross-Chain Activity
+
+6. Privacy
