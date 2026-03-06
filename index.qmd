@@ -22,11 +22,10 @@ format:
       
 
 ---
-## Overview of Binance {#flywheel}
-The overiew of Binance Cycle
+## Binance {#flywheel}
+The overiew of Binance Retention Cycle
 
 <iframe src="binance.html" style="border:none; width:100%; height:70vh;" scrolling="no"></iframe>
-
 
 ---
 
@@ -361,7 +360,7 @@ To earn share of 200,000 ADA.
 
 ---
 
-## Additionals
+## Additionals {.scrollable}
 
 ### What are the pain points of users in crypto right now? 
 
