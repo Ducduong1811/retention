@@ -399,3 +399,30 @@ To earn share of 200,000 ADA.
 5. Multi-Chain or Cross-Chain Activity
 
 6. Privacy
+
+---
+
+## Campaign Components {.scrollable}
+
+### Camps 
+<div style="overflow-x:auto; width:100%;">
+
+| Name                       | Mechanism                                                                                               | Rewards                         | Ref                                                                                                                |
+| -------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Predict/ Vote to win       | Complete tasks & earn voting entries. Each correct entries will have share in the winning rewards pool. | Entries to vote in rewards pool |                                                                                                                    |
+| Wheel Carnival/ Lucky Draw | Complete task & earn draw entries. Each draw is reward-guarantee (no blank)                             | Entries to draw lucky wheel     | [BingX 0 Fee Special Wheel Carnival](https://bingx.com/en/activity/turntable/4428089792?code=QEF5ZS&sourceType=63) |
+| Referral Leaderboard       | Refer new users. Referee must accomplish tasks (KYC, trading volume), then the referrer earn rewards.   | Tokens                          |                                                                                                                    |
+</div>
+
+<br>
+
+### Tasks
+<div style="overflow-x:auto; width:250%;">
+
+| Name                     | Frequency  | Type    | Scope | Detail                                                                          | Mechanism                                                                                                                                                                                                                                                                                                     | Example                                                                                                                                                                                                                                                                                                  | Ref |
+| -------------------------------- | ---------- | ------- | ----- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --- |
+| Baby One Time                    | Once       | Trading | Small | Done first trade with (small x) volume (Spot, Future, Contract)<br><br>Done first ... action in ... | - **Goal**: Baby, first step hooking up user into the event. Simple and easy to do, rewards is adequate, but may not enough to claim/ need to do bigger tasks to earn more.<br>- **Structural**: Usually on top of the campaign                                                                                                    | **Gold, Crude Oil First Contract Trading 100 USDT**<br>After event registration, complete the "First Futures Trade 100 USDT" task(first-time trading volume ≥ 100 USDT; trading scope: Perpetual Futures(Non-Crypto); trading pairs include: XAUT(GOLD)/USDT, Oil WTI/USDT, GOLD(XAU)/USDT) to get voting entries + 2.               |     |
+| Ain't No Mountain High Enough    | Once       | Trading | Big   | Trade volume reach (big x) volume USDT                                                              | - **Goal**: Big milestone serving as big goal for campaign<br>- **Structural**: Usually follow up a small task                                                                                                                                                                                                                     | **Gold, Crude Oil Daily Futures Trading 15,000 USDT**<br><br>Complete the "Trade Futures Daily" task (Daily futures trading volume ≥ 15,000 USDT; futures include Perpetual Futures(Non-Crypto/Crypto); trading pairs include GOLD(XAU)/USDT, XAUT(GOLD)/USDT, Oil WTI/USDT) before it expires to get voting entry + 1.              |     |
+| Harder, Better, Faster, Stronger | Cumulative | Trading | Big   | Cumulative Trading Volume                                                                           | - **Goal**: Have progress tracking the cumulative trading volume, serve as the ladder, hooking user keep playing campaign to earn more rewards, connector from mini tasks to the big task.<br>- **Structural**: After the mini task, before the big task.<br>- **Rewards**: Unlocked step-by-step, where user earn biggest rewards | **Gold, Crude Oil Cumulative Futures Trading Volume 1,000,000 USDT**<br><br>After event registration, complete the "Cumulative Futures Trading Volume of 1,000,000 USDT" task(futures include Perpetual Futures(Crypto/Non-Crypto); trading pairs include GOLD(XAU)/USDT, XAUT(GOLD)/USDT, Oil WTI/USDT) to get voting entries + 10. |    |
+
+</div>
